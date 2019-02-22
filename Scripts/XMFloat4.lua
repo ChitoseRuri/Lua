@@ -12,6 +12,7 @@ end
 
 function XMFLoat4.add( ls, rs )
 	local outList = {};
+	setmetatable(outList,XMFLoat4.mt);
 	outList.x = ls.x + rs.x;
 	outList.y = ls.y + rs.y;
 	outList.z = ls.z + rs.z;
@@ -21,6 +22,7 @@ end
 
 function XMFLoat4.sub( ls, rs )
 	local outList = {};
+	setmetatable(outList,XMFLoat4.mt);
 	outList.x = ls.x - rs.x;
 	outList.y = ls.y - rs.y;
 	outList.z = ls.z - rs.z;
@@ -38,10 +40,11 @@ end
 
 function XMFLoat4.unm(rs)
 	local outList = {};
-	outList.x = !rs.x;
-	outList.y = !rs.y;
-	outList.z = !rs.z;
-	outList.w = !rs.w;
+	setmetatable(outList,XMFLoat4.mt);
+	outList.x = ~rs.x;
+	outList.y = ~rs.y;
+	outList.z = ~rs.z;
+	outList.w = ~rs.w;
 	return outList;
 end
 
