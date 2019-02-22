@@ -1,6 +1,7 @@
 #pragma once
 //connect to lua
 #include <iostream>
+#include <Windows.h>
 #include <lua.hpp>
 #include <lua.h>
 #if defined(DEBUG) | defined(_DEBUG)
