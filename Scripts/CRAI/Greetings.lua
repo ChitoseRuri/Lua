@@ -2,7 +2,7 @@ function getGreetings()
 	local hour = tonumber(os.date("%H"));
 	local str_T;
 	local str_Greeting = "How nice to see you!";
-	--math.randomseed(os.time());
+	-- math.randomseed(os.time());
 	if hour < 6 then
 		str_T = "dawn";
 	elseif hour < 12 then
